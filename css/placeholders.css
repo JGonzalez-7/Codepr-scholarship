@@ -1,0 +1,65 @@
+/* Placeholder images - SVG-based placeholders matching site dimensions */
+/* These generate visual placeholders when actual images are not available */
+
+/* Hero background placeholder */
+.hero-bg-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #161d52 0%, #1a2366 40%, #2a3a8a 70%, #161d52 100%);
+  z-index: 0;
+}
+
+/* Profile image placeholders */
+.placeholder-profile {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dc2041, #e8455f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* News card image placeholders */
+.placeholder-news {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #161d52, #2a3a8a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.5);
+  font-size: 3rem;
+}
+
+/* Logo placeholder */
+.placeholder-logo {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  color: #dc2041;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Footer logo placeholder */
+.placeholder-footer-logo {
+  width: 150px;
+  height: 50px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dc2041;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0 auto 10px auto;
+}
