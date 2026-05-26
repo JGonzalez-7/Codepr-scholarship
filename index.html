@@ -42,8 +42,8 @@
   <nav class="nav-wrp">
     <div class="container">
       <div class="nav-header">
-        <a class="navbar-brand" href="https://www.holbertonschoolpr.com/">
-          <img src="pics/holberton_red.png" alt="Holberton Logo" />
+        <a class="navbar-brand" href="index.html">
+          <img src="pics/holberton_blue.svg" alt="Holberton Coding School" />
         </a>
         <button class="nav-handle" id="navToggle" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
@@ -108,8 +108,8 @@
       <div class="row pt-5">
         <div class="col-sm-6 pt-3">
           <div class="embed-responsive embed-responsive-16by9">
-            <video controls>
-              <source id="videoFrame" class="embed-responsive-item" src="video.mp4" allowfullscreen>
+            <video controls preload="metadata">
+              <source id="videoFrame" class="embed-responsive-item" src="video.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -262,7 +262,7 @@
                       aria-expanded="false">
                       <img class="img-responsive" src="pics/gabriela.jpg" alt="Gabriela Martínez" height="100px" width="100px"
                         style="border-radius: 50%" />
-                      <p class="lead mx-auto text-center text-danger">
+                      <p class="lead mx-auto text-center text-accent">
                         <br />Gabriela Martínez
                       </p>
                     </button>
@@ -275,7 +275,7 @@
                     <p>
                       Photographer
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-arrow-right" viewBox="0 0 16 16" style="color: #dc2041">
+                        class="bi bi-arrow-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                           d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                       </svg>
@@ -296,7 +296,7 @@
                       aria-expanded="false">
                       <img class="img-responsive" src="pics/jeff.jpg" alt="Jeffrey Martínez" height="100px" width="100px"
                         style="border-radius: 50%" />
-                      <p class="lead mx-auto text-center text-danger">
+                      <p class="lead mx-auto text-center text-accent">
                         <br />
                         Jeffrey Martínez
                       </p>
@@ -310,7 +310,7 @@
                     <p>
                       Waiter
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-arrow-right" viewBox="0 0 16 16" style="color: #dc2041">
+                        class="bi bi-arrow-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                           d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                       </svg>
@@ -335,7 +335,7 @@
                         aria-expanded="false">
                         <img class="img-responsive" src="pics/xavier.jpg" alt="Xavier E. Figueroa" height="100px" width="100px"
                           style="border-radius: 50%" />
-                        <p class="lead mx-auto text-center text-danger">
+                        <p class="lead mx-auto text-center text-accent">
                           <br />
                           Xavier E. Figueroa
                         </p>
@@ -349,7 +349,7 @@
                       <p>
                         Bank Teller
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                          class="bi bi-arrow-right" viewBox="0 0 16 16" style="color: #dc2041">
+                          class="bi bi-arrow-right" viewBox="0 0 16 16">
                           <path fill-rule="evenodd"
                             d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                         </svg>
@@ -506,12 +506,6 @@
   <!-- ==========================================
        SCRIPTS
        ========================================== -->
-  <script>
-    var videoFrame = document.getElementById("videoFrame");
-    videoFrame.setAttribute("autoplay", "false");
-    videoFrame.removeAttribute("autoplay");
-  </script>
-
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

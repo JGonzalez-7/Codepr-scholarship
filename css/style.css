@@ -1,9 +1,20 @@
 /* ============================================
    Holberton Scholarship - Custom Styles
    Color Palette from holbertonschoolpr.com:
-   - Primary Red: #dc2041
    - Secondary Navy: #161d52
+   - Accent Blue: #75c7d2
+   - Soft Surface: #f7f6f7
    ============================================ */
+
+:root {
+  --holberton-navy: #161d52;
+  --holberton-accent: #75c7d2;
+  --holberton-accent-dark: #4aaebc;
+  --holberton-surface: #f7f6f7;
+  --holberton-gray: #575757;
+  --holberton-text: #333;
+  --holberton-white: #fff;
+}
 
 /* --- Reset & Base --- */
 * {
@@ -19,8 +30,9 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  color: #333;
+  color: var(--holberton-text);
   overflow-x: hidden;
+  background: var(--holberton-white);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,7 +59,7 @@ img {
 
 /* --- Navbar --- */
 .nav-wrp {
-  background-color: #fff;
+  background-color: var(--holberton-white);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
   position: fixed;
   top: 0;
@@ -60,7 +72,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: 108px;
+  max-width: none;
+  padding-left: 18px;
+  padding-right: 32px;
 }
 
 .nav-header {
@@ -69,7 +84,8 @@ img {
 }
 
 .nav-header .navbar-brand img {
-  height: 45px;
+  height: 86px;
+  width: auto;
 }
 
 .nav-handle {
@@ -78,7 +94,7 @@ img {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #161d52;
+  color: var(--holberton-navy);
 }
 
 .nav-links {
@@ -98,25 +114,25 @@ img {
   display: block;
   padding: 8px 14px;
   font-size: 14px;
-  color: #333;
+  color: var(--holberton-navy);
   text-transform: uppercase;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-links > li > a:hover {
-  color: #dc2041;
+  color: var(--holberton-accent-dark);
 }
 
 .nav-links .btn-info a {
-  color: #fff;
+  color: var(--holberton-white);
 }
 
 /* --- Buttons --- */
 .btn-info {
-  background-color: #dc2041;
-  border-color: #dc2041;
-  color: #fff;
+  background-color: var(--holberton-accent);
+  border-color: var(--holberton-accent);
+  color: var(--holberton-navy);
   padding: 10px 24px;
   border-radius: 4px;
   font-size: 14px;
@@ -128,13 +144,13 @@ img {
 }
 
 .btn-info:hover {
-  background-color: #b01a35;
-  border-color: #b01a35;
-  color: #fff;
+  background-color: var(--holberton-accent-dark);
+  border-color: var(--holberton-accent-dark);
+  color: var(--holberton-navy);
 }
 
 .btn-info a {
-  color: #fff;
+  color: var(--holberton-navy);
   text-decoration: none;
 }
 
@@ -190,7 +206,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(22, 29, 82, 0.35);
+  background: linear-gradient(90deg, rgba(22, 29, 82, 0.7), rgba(22, 29, 82, 0.25));
   z-index: 1;
 }
 
@@ -211,7 +227,7 @@ img {
 }
 
 .caption .title {
-  color: #fff;
+  color: var(--holberton-white);
   font-size: 3.5rem;
   line-height: 1.2;
   font-weight: 700;
@@ -222,7 +238,7 @@ img {
 }
 
 .title-sub {
-  color: #fff;
+  color: var(--holberton-white);
   font-size: 1.4em;
   margin-bottom: 40px;
   font-weight: 700;
@@ -230,71 +246,79 @@ img {
 }
 
 .colored {
-  color: #dc2041 !important;
+  color: var(--holberton-accent) !important;
 }
 
 /* --- About Section (Dark) --- */
 .expect-section {
-  background-color: #161d52;
+  background-color: var(--holberton-navy);
   position: relative;
   padding: 80px 0;
   overflow: hidden;
 }
 
 .expect-section h1 {
-  color: #fff;
+  color: var(--holberton-white);
 }
 
 .expect-section h3 {
-  color: #fff !important;
+  color: var(--holberton-white) !important;
 }
 
 .expect-section h4 {
-  color: #fff;
+  color: var(--holberton-white);
 }
 
 .expect-section p.lead {
-  color: #fff;
+  color: var(--holberton-white);
+}
+
+.expect-section .row.pt-5 {
+  align-items: center;
+}
+
+.expect-section .col-sm-6.pt-3 {
+  padding-top: 0 !important;
 }
 
 /* --- Achievements / Stats Section --- */
 .expect-section-02 {
-  background: #eaeaea;
+  background: var(--holberton-surface);
   padding: 80px 0;
 }
 
 .expect-section-02 h1 {
-  color: #161d52;
+  color: var(--holberton-navy);
 }
 
 .expect-section-02 h2 {
-  color: #161d52;
+  color: var(--holberton-navy);
   font-weight: 700;
 }
 
 .expect-section-02 p.lead {
-  color: #575757;
+  color: var(--holberton-gray);
 }
 
 .stats-number {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.2;
-  color: #dc2041;
+  color: var(--holberton-accent);
 }
 
 /* --- Career Success Section --- */
 .career-section {
-  background: #fff;
+  background: var(--holberton-white);
   padding: 80px 0;
 }
 
 .career-section h1 {
-  color: #161d52;
+  color: var(--holberton-navy);
 }
 
 .accordion .card-header {
-  background-color: #fff;
+  background-color: var(--holberton-white);
   border: none;
 }
 
@@ -320,7 +344,7 @@ img {
 }
 
 .accordion-button p.lead {
-  color: #dc2041 !important;
+  color: var(--holberton-accent-dark) !important;
   margin: 0;
   font-weight: 700;
 }
@@ -333,30 +357,29 @@ img {
 .card-body p {
   padding: 10px 15px;
   font-size: 1.1em;
-  color: #333;
+  color: var(--holberton-text);
 }
 
 .card-body svg {
-  color: #dc2041;
+  color: var(--holberton-accent-dark);
 }
 
 /* --- News Section --- */
 .news-section {
-  background: #fff;
+  background: var(--holberton-white);
   padding: 80px 0;
 }
 
 .news-section h1 {
-  color: #161d52;
+  color: var(--holberton-navy);
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(22, 29, 82, 0.12);
+  border-radius: 8px;
   overflow: hidden;
   letter-spacing: 0;
-  border: none;
+  border: 1px solid rgba(22, 29, 82, 0.08);
   transition: transform 0.3s ease;
 }
 
@@ -380,7 +403,7 @@ img {
 }
 
 .card-body .read-more {
-  color: #dc2041;
+  color: var(--holberton-accent-dark);
   font-weight: 700;
   text-decoration: none;
 }
@@ -390,31 +413,31 @@ img {
 }
 
 .card-body p {
-  color: #575757;
+  color: var(--holberton-gray);
   line-height: 1.6;
 }
 
 /* --- Donor Benefits Section --- */
 .donor-section {
-  background: #fff;
+  background: var(--holberton-surface);
   padding: 80px 0;
 }
 
 .donor-section h1 {
-  color: #161d52;
+  color: var(--holberton-navy);
 }
 
 /* --- Footer --- */
 .footer-section {
-  background-color: #dc2041;
-  color: #fff;
+  background-color: var(--holberton-navy);
+  color: var(--holberton-white);
   font-size: 13px;
   padding: 60px 0 30px 0;
   text-align: center;
 }
 
 .footer-section h4 {
-  color: #fff;
+  color: var(--holberton-white);
   font-size: 1.3em;
   font-weight: 700;
   text-align: center;
@@ -427,7 +450,7 @@ img {
 }
 
 .footer-section p {
-  color: #fff;
+  color: var(--holberton-white);
   margin-bottom: 5px;
 }
 
@@ -441,36 +464,49 @@ hr {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right,
-    #f0f0f0,
-    #dc2041,
-    #dc2041,
-    #f0f0f0);
+    transparent,
+    var(--holberton-accent),
+    var(--holberton-accent-dark),
+    transparent);
 }
 
 .hr2 {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right,
-    #dc2041,
-    #f0f0f0,
-    #f0f0f0,
-    #dc2041);
+    transparent,
+    var(--holberton-accent),
+    var(--holberton-accent-dark),
+    transparent);
 }
 
 /* --- Read More Links --- */
 .read-more {
-  color: #dc2041;
+  color: var(--holberton-accent-dark);
   transition: color 0.3s ease;
 }
 
 .read-more:hover {
-  color: #b01a35;
+  color: var(--holberton-navy);
 }
 
 /* --- Embed Responsive (Video) --- */
 .embed-responsive {
-  border-radius: 7px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #0d1238;
+  border: 4px solid var(--holberton-white);
+  border-radius: 8px;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.28);
   overflow: hidden;
+}
+
+.embed-responsive video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* --- Section Headings --- */
@@ -486,10 +522,10 @@ h1 {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 108px;
     left: 0;
     width: 100%;
-    background: #fff;
+    background: var(--holberton-white);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     padding: 20px;
   }
@@ -557,8 +593,8 @@ h1 {
   text-align: center;
 }
 
-.text-danger {
-  color: #dc2041 !important;
+.text-accent {
+  color: var(--holberton-accent-dark) !important;
 }
 
 .pt-3 {
@@ -616,14 +652,14 @@ h1 {
 
 /* Override Bootstrap btn-info color */
 .btn-info {
-  background-color: #dc2041 !important;
-  border-color: #dc2041 !important;
-  color: #fff !important;
+  background-color: var(--holberton-accent) !important;
+  border-color: var(--holberton-accent) !important;
+  color: var(--holberton-navy) !important;
 }
 
 .btn-info:hover,
 .btn-info:focus {
-  background-color: #b01a35 !important;
-  border-color: #b01a35 !important;
-  color: #fff !important;
+  background-color: var(--holberton-accent-dark) !important;
+  border-color: var(--holberton-accent-dark) !important;
+  color: var(--holberton-navy) !important;
 }
